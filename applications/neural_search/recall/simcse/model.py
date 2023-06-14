@@ -13,6 +13,10 @@
 # limitations under the License.
 
 
+'''
+simcse原理：
+
+'''
 import paddle
 import paddle.nn as nn
 import paddle.nn.functional as F
