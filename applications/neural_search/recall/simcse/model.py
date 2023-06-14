@@ -135,7 +135,8 @@ class SimCSE(nn.Layer):
 
         # scale cosine to ease training converge
         cosine_sim *= self.sacle
-
+        
+        # simcse 自己与自己是一类，用多分类表示是不同类
         labels = paddle.arange(0, query_cls_embedding.shape[0], dtype="int64")
         labels = paddle.reshape(labels, shape=[-1, 1])
 
